@@ -3,88 +3,123 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dishing Out My Pasta</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <title>ASYNC</title>
   </head>
   <body>
-    <h1>Dishing Out My Pasta</h1>
-    <h3>Made From Scratch, Made To Outmatch</h3>
-    <img
-      src="https://static01.nyt.com/images/2021/02/14/dining/carbonara-horizontal/carbonara-horizontal-mediumSquareAt3X-v2.jpg"
-      alt="dish"
-    />
-    <p>
-      I'm the best at dishing out pasta. Trust me, bro. Here is my recipe for
-      Carbonara
-    </p>
-    <h2>Ingredients</h2>
-    <ul>
-      <li>egg</li>
-      <li>guanciale</li>
-      <li>parmigiano reggiano</li>
-      <li>pepper</li>
-      <li>salt</li>
-      <li>spaghetti</li>
-    </ul>
-    <h2>Directions</h2>
-    <ol>
-      <li>
-        <strong>Batons</strong> – Cut the guanciale into thick batons. Biting
-        through the golden brown crust into meaty bits of salty guanciale is
-        part of the awesomeness that is carbonara!
-      </li>
-      <li>
-        <strong>Finely grate</strong>Finely grate the parmigiana reggiano or
-        pecorino. I use a microplane – one of can’t-live-without kitchenware
-        items!
-      </li>
-      <li>
-        <strong>Sauce</strong> – Whisk together the egg, cheese and pepper in a
-        large bowl. It needs to be a large bowl because the pasta will be
-        stirred into the sauce in the bowl, off the stove, to avoid scrambling
-        the eggs.
-      </li>
-      <li>
-        <strong>Cook pasta</strong> – Bring 4 litres (4 quarts) of water to the
-        boil with 1 tablespoon of salt. Cook the pasta per packet directions. It
-        should be firm, not soft, but fully cooked through.
-      </li>
-      <li>
-        <strong>Reserve pasta cooking water</strong> – Just before draining,
-        scoop out one cup of pasta cooking water. Then drain the pasta in a
-        colander.
-      </li>
-      <li>
-        <strong>Cook guanciale</strong> until golden while the pasta is cooking.
-        You don’t need any oil, the guanciale will fry in its own fat.
-      </li>
-      <li>
-        <strong>Toss pasta in guanciale</strong> – Tumble the hot pasta into the
-        pan with the guanciale then toss so the pasta gets coated in the
-        guanciale fat.
-      </li>
-      <li>
-        <strong>Transfer into sauce bowl</strong> – Tip the hot pasta into the
-        bowl with the egg and use a rubber spatula to scrape out every drop of
-        the guanciale fat into the bowl. That stuff is gold! 🙂
-      </li>
-      <li><strong>Add 1/2 cup pasta cooking water</strong> into the bowl.</li>
-      <li>
-        <p>
-          <strong> Mix vigorously</strong> with the handle of a wooden spoon,
-          spinning the pasta around, for around 30 seconds to 1 minute. Watch as
-          the watery pale yellow liquid magically transforms into a creamy
-          sauce.
-        </p>
-        <p>
-          <strong>You know it's ready</strong> when the sauce is no longer
-          watery and pooled in the bottom of the bowl. Instead, it will be
-          thickened, creamy, and clinging to the pasta!
-        </p>
-      </li>
-      <li>
-        <strong>Serve immediately in warm bowls.</strong> Pasta waits for no
-        one!
-      </li>
-    </ol>
+    <div class="page">
+      <!-- Left info panel -->
+      <aside class="left">
+        <div class="logo">Annie</div>
+
+        <div class="left-body">
+          <p class="eyebrow">Get in touch</p>
+          <h1>Let's make something <em>worth</em> talking about.</h1>
+          <p>
+            We typically respond within one business day. For urgent matters,
+            call us directly.
+          </p>
+        </div>
+
+        <div class="contact-details">
+          <div class="detail">
+            <span class="detail-label">Email</span>
+            <span class="detail-value">annie@gmail.com</span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Phone</span>
+            <span class="detail-value">+1 (216) 000-0000</span>
+          </div>
+          <div class="detail">
+            <span class="detail-label">Location</span>
+            <span class="detail-value">Cleveland, OH</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Right form panel -->
+      <main class="right">
+        <form id="contactForm" novalidate>
+          <div class="form-header">
+            <h2>Send us a message</h2>
+            <p>Fill out the form and we'll be in touch shortly.</p>
+          </div>
+
+          <div class="row">
+            <div class="field">
+              <label for="firstName">First name</label>
+              <input id="firstName" type="text" placeholder="Jane" required />
+            </div>
+            <div class="field">
+              <label for="lastName">Last name</label>
+              <input id="lastName" type="text" placeholder="Smith" required />
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="email">Email address</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="jane@company.com"
+              required
+            />
+          </div>
+
+          <div class="field">
+            <label for="subject">Subject</label>
+            <select id="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option>New Lego Project Inquiry</option>
+              <option>Pricing & packages</option>
+              <option>Partnership</option>
+              <option>General question</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea
+              id="message"
+              placeholder="Tell us about your project…"
+              required
+            ></textarea>
+          </div>
+
+          <div class="submit-row">
+            <span class="note">* All fields required</span>
+            <button type="submit"><span>Send message →</span></button>
+          </div>
+
+          <!-- Success state -->
+          <div class="success" id="successMsg" role="alert">
+            <div class="success-icon">
+              <svg
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <h3>Message sent!</h3>
+            <p>
+              Thanks for reaching out. We'll get back to you within one business
+              day.
+            </p>
+          </div>
+        </form>
+      </main>
+    </div>
+    <script src="js/index.js"></script>
   </body>
 </html>
