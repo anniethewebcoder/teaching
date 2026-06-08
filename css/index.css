@@ -1,13 +1,13 @@
+/* ── PAPER TEXTURE & BASE ── */
 :root {
-  --cream: #fdf6ec;
-  --brown: #3d1f0d;
-  --tan: #c8833a;
-  --tan-light: #f5ddb8;
-  --rust: #b54a1a;
-  --sage: #6b8c6b;
-  --sky: #a8c9e8;
-  --sky-dark: #3a7bad;
-  --warm-white: #fefaf4;
+  --ink: #1a1209;
+  --ink-faded: #3d3020;
+  --paper: #f2e8d0;
+  --paper-dark: #e8dbbf;
+  --paper-aged: #d9cba8;
+  --red: #8b1a1a;
+  --gold: #8b6914;
+  --rule: #2a1f10;
 }
 
 *,
@@ -23,414 +23,634 @@ html {
 }
 
 body {
-  background: var(--cream);
-  color: var(--brown);
-  font-family: "DM Sans", sans-serif;
-  overflow-x: hidden;
+  background: #b8a98a;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 28px,
+      rgba(0, 0, 0, 0.04) 28px,
+      rgba(0, 0, 0, 0.04) 29px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 28px,
+      rgba(0, 0, 0, 0.025) 28px,
+      rgba(0, 0, 0, 0.025) 29px
+    );
+  min-height: 100vh;
+  padding: 2rem 1rem 4rem;
+  font-family: "IM Fell English", serif;
+  color: var(--ink);
 }
 
-/* NAV */
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1.2rem 4rem;
-  background: var(--warm-white);
-  border-bottom: 2px solid var(--brown);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-.nav-logo {
-  font-family: "Fraunces", serif;
-  font-size: 1.4rem;
-  font-weight: 900;
-  letter-spacing: -0.02em;
-  color: var(--brown);
-  text-decoration: none;
-}
-
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-}
-.nav-links a {
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--brown);
-  opacity: 0.65;
-  transition: opacity 0.2s;
-}
-.nav-links a:hover {
-  opacity: 1;
-}
-
-.nav-btn {
-  background: var(--brown);
-  color: var(--cream);
-  border: none;
-  border-radius: 999px;
-  padding: 0.55rem 1.4rem;
-  font-family: "DM Sans", sans-serif;
-  font-size: 0.88rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.nav-btn:hover {
-  background: var(--rust);
-}
-
-/* HERO */
-.hero {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  min-height: 88vh;
-  overflow: hidden;
-}
-
-.hero-left {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 5rem 4rem 5rem 5rem;
-  background: var(--cream);
-  position: relative;
-}
-
-.hero-tag {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: var(--tan-light);
-  color: var(--rust);
-  font-size: 0.78rem;
-  font-weight: 500;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  padding: 5px 14px;
-  border-radius: 999px;
-  border: 1.5px solid var(--tan);
-  margin-bottom: 1.5rem;
-  width: fit-content;
-  animation: fadeUp 0.6s ease both;
-}
-
-.hero-h1 {
-  font-family: "Fraunces", serif;
-  font-size: clamp(3rem, 5.5vw, 5rem);
-  font-weight: 900;
-  line-height: 1;
-  letter-spacing: -0.03em;
-  color: var(--brown);
-  animation: fadeUp 0.6s 0.1s ease both;
-}
-
-.hero-h1 em {
-  font-style: italic;
-  color: var(--rust);
-}
-
-.hero-sub {
-  font-size: 1.05rem;
-  color: var(--brown);
-  opacity: 0.65;
-  line-height: 1.65;
-  max-width: 400px;
-  margin: 1.4rem 0 2.2rem;
-  animation: fadeUp 0.6s 0.2s ease both;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 1rem;
-  animation: fadeUp 0.6s 0.3s ease both;
-}
-
-.btn-primary {
-  background: var(--brown);
-  color: var(--cream);
-  padding: 0.85rem 2rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border: 2px solid var(--brown);
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.15s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-primary:hover {
-  background: var(--rust);
-  border-color: var(--rust);
-  transform: translateY(-2px);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--brown);
-  padding: 0.85rem 2rem;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  border: 2px solid var(--brown);
-  cursor: pointer;
-  transition:
-    background 0.2s,
-    transform 0.15s;
-  text-decoration: none;
-  display: inline-block;
-}
-.btn-outline:hover {
-  background: var(--tan-light);
-  transform: translateY(-2px);
-}
-
-.hero-right {
-  background: var(--tan-light);
-  border-left: 3px solid var(--brown);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 3rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero-scene {
-  width: 100%;
-  max-width: 480px;
-  animation: floatUp 3s ease-in-out infinite;
-}
-
-@keyframes floatUp {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-/* paw prints scattered */
-.paw-bg {
-  position: absolute;
-  opacity: 0.12;
+/* grain overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
   pointer-events: none;
+  z-index: 9999;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.08'/%3E%3C/svg%3E");
+  opacity: 0.45;
 }
 
-/* MARQUEE */
-.marquee-bar {
-  background: var(--brown);
-  color: var(--cream);
-  padding: 0.85rem 0;
-  overflow: hidden;
-  white-space: nowrap;
-  font-family: "Fraunces", serif;
-  font-size: 1rem;
-  font-style: italic;
+/* ── NEWSPAPER SHEET ── */
+.newspaper {
+  max-width: 980px;
+  margin: 0 auto;
+  background: var(--paper);
+  box-shadow:
+    0 0 0 1px var(--rule),
+    4px 4px 0 1px #8c7a5a,
+    8px 8px 0 1px #6e5e3e,
+    12px 12px 20px rgba(0, 0, 0, 0.45);
+  position: relative;
 }
 
-.marquee-inner {
-  display: inline-block;
-  animation: marquee 18s linear infinite;
+/* subtle yellowing vignette */
+.newspaper::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 55%,
+    rgba(100, 70, 20, 0.12) 100%
+  );
 }
 
-.marquee-inner span {
-  margin: 0 1.5rem;
-}
-.marquee-sep {
-  color: var(--tan);
-}
-
-@keyframes marquee {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+/* ── MASTHEAD ── */
+.masthead {
+  border-bottom: 3px double var(--rule);
+  padding: 1.2rem 2rem 1rem;
+  text-align: center;
+  position: relative;
+  background: var(--paper);
 }
 
-/* BREEDS SECTION */
-.breeds {
-  padding: 6rem 5rem;
-  background: var(--warm-white);
-  border-top: 2px solid var(--brown);
-}
-
-.section-header {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  margin-bottom: 3rem;
-}
-
-.section-title {
-  font-family: "Fraunces", serif;
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  font-weight: 900;
-  line-height: 1.1;
-  letter-spacing: -0.02em;
-}
-
-.section-title em {
-  font-style: italic;
-  color: var(--rust);
-}
-
-.breed-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.breed-card {
-  background: var(--cream);
-  border: 2px solid var(--brown);
-  border-radius: 20px;
-  overflow: hidden;
-  cursor: pointer;
-  transition:
-    transform 0.2s,
-    box-shadow 0.2s;
-}
-
-.breed-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 6px 8px 0 var(--brown);
-}
-
-.breed-illo {
-  background: var(--tan-light);
+.masthead-top {
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding: 2rem 1.5rem 1rem;
-  border-bottom: 2px solid var(--brown);
+  justify-content: space-between;
+  font-family: "Special Elite", cursive;
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
 }
 
-.breed-illo svg {
-  width: 140px;
-  height: 140px;
+.masthead-rule {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: 0.3rem 0;
+}
+.masthead-rule-thick {
+  border: none;
+  border-top: 3px solid var(--rule);
+  margin: 0.35rem 0;
+}
+.masthead-rule-dbl {
+  border: none;
+  border-top: 5px double var(--rule);
+  margin: 0.4rem 0;
 }
 
-.breed-info {
-  padding: 1.2rem 1.4rem;
+.paper-name {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: clamp(3.2rem, 8vw, 6rem);
+  line-height: 1;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  margin: 0.2rem 0;
 }
-.breed-name {
-  font-family: "Fraunces", serif;
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
+
+.paper-tagline {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--ink-faded);
+  margin-bottom: 0.4rem;
 }
-.breed-desc {
-  font-size: 0.85rem;
-  opacity: 0.65;
+
+.masthead-bottom {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  color: var(--ink-faded);
+  text-transform: uppercase;
+}
+
+.edition-badge {
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "Special Elite", cursive;
+  font-size: 0.58rem;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  text-transform: uppercase;
+}
+
+/* ── SECTION LABELS ── */
+.section-rule {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 0 2rem;
+}
+.section-rule-line {
+  flex: 1;
+  border-top: 1px solid var(--rule);
+}
+.section-rule-label {
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--paper);
+  background: var(--ink);
+  padding: 2px 10px;
+  white-space: nowrap;
+}
+
+/* ── BANNER HEADLINE ── */
+.banner {
+  padding: 1.4rem 2rem 0.6rem;
+  text-align: center;
+  border-bottom: 3px double var(--rule);
+}
+
+.kicker {
+  font-family: "Special Elite", cursive;
+  font-size: 0.68rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-bottom: 0.4rem;
+}
+
+.banner-hed {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 5.5vw, 4.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+
+.banner-hed em {
+  font-style: italic;
+}
+
+.banner-deck {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--ink-faded);
+  max-width: 580px;
+  margin: 0.6rem auto 0;
   line-height: 1.5;
 }
-.breed-tags {
-  display: flex;
-  gap: 6px;
-  margin-top: 0.8rem;
-  flex-wrap: wrap;
-}
-.breed-tag {
-  font-size: 0.72rem;
-  font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 999px;
-  border: 1.5px solid var(--brown);
-  opacity: 0.7;
+
+/* ── COLUMN LAYOUT ── */
+.columns-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  border-bottom: 2px solid var(--rule);
 }
 
-/* QUOTE SECTION */
-.quote-section {
-  background: var(--brown);
-  color: var(--cream);
-  padding: 5rem;
+.columns-2 {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  border-bottom: 2px solid var(--rule);
+}
+
+.columns-2-sym {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 2px solid var(--rule);
+}
+
+.col {
+  padding: 1.2rem 1.6rem;
+  border-right: 1px solid var(--rule);
+}
+.col:last-child {
+  border-right: none;
+}
+
+/* ── TYPOGRAPHY ── */
+.col-hed {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  font-size: 1.4rem;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
   text-align: center;
-  border-top: 2px solid var(--brown);
 }
 
-.big-quote {
-  font-family: "Fraunces", serif;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+.col-hed em {
   font-style: italic;
-  font-weight: 700;
-  line-height: 1.25;
-  max-width: 800px;
-  margin: 0 auto 1rem;
-  opacity: 0.95;
 }
 
-.quote-attr {
-  opacity: 0.5;
+.byline {
+  font-family: "Special Elite", cursive;
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  text-align: center;
+  margin-bottom: 0.8rem;
+}
+
+.col-body {
+  font-family: "IM Fell English", serif;
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--ink);
+  text-align: center;
+  hyphens: auto;
+}
+
+.col-body p + p {
+  margin-top: 0.7rem;
+  text-indent: 1.2em;
+}
+
+.drop-cap::first-letter {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 4.2rem;
+  line-height: 0.78;
+  float: left;
+  margin-right: 5px;
+  margin-top: 4px;
+  color: var(--ink);
+}
+
+/* ── JOKE BOXES ── */
+.joke-box {
+  border: 1.5px solid var(--rule);
+  margin: 0.8rem 0;
+  padding: 0.8rem 1rem;
+  background: var(--paper-dark);
+  position: relative;
+}
+
+.joke-box::before {
+  content: attr(data-num);
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 1.6rem;
+  color: var(--paper-aged);
+  position: absolute;
+  top: 4px;
+  left: 8px;
+  line-height: 1;
+}
+
+.joke-q {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-style: italic;
+  font-size: 0.88rem;
+  line-height: 1.4;
+  color: var(--ink);
+  padding-left: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.joke-divider {
+  border: none;
+  border-top: 1px dashed var(--rule);
+  margin: 0.5rem 0;
+  opacity: 0.4;
+}
+
+.joke-a {
+  font-family: "IM Fell English", serif;
+  font-size: 0.86rem;
+  line-height: 1.4;
+  color: var(--red);
+  padding-left: 1.4rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+}
+
+.joke-a::before {
+  content: "▸ Reveal Answer";
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 2px;
+}
+
+.joke-a.revealed::before {
+  content: "Answer:";
+  color: var(--ink-faded);
+}
+.joke-a .answer-text {
+  display: none;
+}
+.joke-a.revealed .answer-text {
+  display: block;
+}
+.joke-a .reveal-hint {
+  font-style: italic;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+.joke-a.revealed .reveal-hint {
+  display: none;
+}
+
+/* ── ILLUSTRATION BOX ── */
+.illo-box {
+  border: 1.5px solid var(--rule);
+  padding: 1rem;
+  text-align: center;
+  background: var(--paper-dark);
+  margin: 0.8rem 0;
+}
+
+.illo-caption {
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  margin-top: 0.5rem;
+}
+
+/* ── PULL QUOTE ── */
+.pullquote {
+  border-top: 3px solid var(--rule);
+  border-bottom: 3px solid var(--rule);
+  padding: 0.8rem 1.2rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.pullquote p {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  line-height: 1.4;
+  color: var(--ink);
+}
+
+.pullquote cite {
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  display: block;
+  margin-top: 0.4rem;
+}
+
+/* ── AD BOX ── */
+.ad-box {
+  border: 3px double var(--rule);
+  padding: 1rem;
+  text-align: center;
+  background: var(--paper-aged);
+  margin: 0.8rem 0;
+  position: relative;
+}
+
+.ad-box::before {
+  content: "— Advertisement —";
+  font-family: "Special Elite", cursive;
+  font-size: 0.52rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  display: block;
+  margin-bottom: 0.6rem;
+  opacity: 0.6;
+}
+
+.ad-hed {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 1.8rem;
+  color: var(--ink);
+  line-height: 1;
+  margin-bottom: 0.3rem;
+}
+
+.ad-copy {
+  font-family: "IM Fell English", serif;
+  font-style: italic;
+  font-size: 0.78rem;
+  color: var(--ink-faded);
+  line-height: 1.4;
+}
+
+.ad-tagline {
+  font-family: "Special Elite", cursive;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--red);
+  margin-top: 0.5rem;
+}
+
+/* ── RATINGS TABLE ── */
+.groaner-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: "IM Fell English", serif;
+  font-size: 0.82rem;
+}
+
+.groaner-table th {
+  font-family: "Special Elite", cursive;
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  border-bottom: 2px solid var(--rule);
+  padding: 0.4rem 0.5rem;
+  text-align: left;
+  color: var(--ink-faded);
+}
+
+.groaner-table td {
+  padding: 0.45rem 0.5rem;
+  border-bottom: 1px solid rgba(42, 31, 16, 0.2);
+  vertical-align: middle;
+  color: var(--ink);
+}
+
+.groaner-table tr:last-child td {
+  border-bottom: none;
+}
+
+.groan-stars {
+  color: var(--gold);
+  letter-spacing: -2px;
   font-size: 0.9rem;
 }
 
-.quote-dogs {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 3rem;
+.groaner-table td:first-child {
+  font-style: italic;
 }
 
-/* FOOTER */
-footer {
-  background: var(--cream);
-  border-top: 2px solid var(--brown);
-  padding: 2rem 5rem;
+/* ── FOOTER ── */
+.paper-footer {
+  border-top: 3px double var(--rule);
+  padding: 0.8rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  font-size: 0.85rem;
-  opacity: 0.7;
+  background: var(--paper-dark);
 }
 
-@keyframes fadeUp {
+.footer-name {
+  font-family: "UnifrakturMaguntia", cursive;
+  font-size: 1.4rem;
+  color: var(--ink);
+}
+
+.footer-copy {
+  font-family: "Special Elite", cursive;
+  font-size: 0.58rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink-faded);
+  text-align: center;
+  line-height: 1.6;
+}
+
+.footer-slogan {
+  font-family: "IM Fell English", serif;
+  font-style: italic;
+  font-size: 0.72rem;
+  color: var(--ink-faded);
+  text-align: right;
+}
+
+/* ── STAMPS & DECORATIONS ── */
+.stamp {
+  display: inline-block;
+  border: 3px solid var(--red);
+  color: var(--red);
+  font-family: "Special Elite", cursive;
+  font-size: 0.64rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 3px 8px;
+  transform: rotate(-4deg);
+  opacity: 0.75;
+}
+
+.ornament {
+  text-align: center;
+  font-size: 1.1rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  padding: 0.3rem 0;
+}
+
+.ornament-sm {
+  text-align: center;
+  font-size: 0.7rem;
+  color: var(--ink-faded);
+  letter-spacing: 0.6em;
+  padding: 0.2rem 0;
+  opacity: 0.55;
+}
+
+/* ── SUBHEAD ── */
+.subhead {
+  font-family: "Special Elite", cursive;
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--ink);
+  border-top: 1px solid var(--rule);
+  border-bottom: 1px solid var(--rule);
+  padding: 3px 0;
+  margin: 0.7rem 0 0.5rem;
+  text-align: center;
+}
+
+/* ── CONTEST BOX ── */
+.contest-box {
+  border: 4px double var(--rule);
+  padding: 1.2rem;
+  text-align: center;
+  position: relative;
+  background: var(--paper);
+}
+
+.contest-hed {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-weight: 900;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+.contest-body {
+  font-family: "IM Fell English", serif;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  font-style: italic;
+  color: var(--ink-faded);
+}
+
+/* ── HOVER EFFECT ON JOKES ── */
+.joke-a:hover {
+  cursor: pointer;
+}
+.joke-box:has(.joke-a:not(.revealed)):hover {
+  background: #ece0c4;
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeIn {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(6px);
   }
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
+.answer-text {
+  animation: fadeIn 0.3s ease;
+}
 
-@media (max-width: 900px) {
-  nav {
-    padding: 1rem 1.5rem;
-  }
-  .hero {
-    grid-template-columns: 1fr;
-    min-height: auto;
-  }
-  .hero-left {
-    padding: 3rem 1.5rem;
-  }
-  .hero-right {
-    min-height: 360px;
-    padding: 2rem;
-  }
-  .breeds {
-    padding: 3rem 1.5rem;
-  }
-  .breed-grid {
+/* ── RESPONSIVE ── */
+@media (max-width: 700px) {
+  .columns-3,
+  .columns-2,
+  .columns-2-sym {
     grid-template-columns: 1fr;
   }
-  .quote-section {
-    padding: 3rem 1.5rem;
+  .col {
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
   }
-  footer {
-    padding: 1.5rem;
+  .col:last-child {
+    border-bottom: none;
+  }
+  .paper-name {
+    font-size: 3rem;
+  }
+  .paper-footer {
     flex-direction: column;
     gap: 0.5rem;
     text-align: center;

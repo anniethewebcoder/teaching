@@ -3,262 +3,90 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Pun & Only — Est. 1952</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=IM+Fell+English:ital@0;1&family=Special+Elite&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/index.css" />
-    <title>Dogs API</title>
   </head>
   <body>
-    <nav>
-      <a class="nav-logo" href="#">🐾 Good Dogs Club</a>
-      <ul class="nav-links">
-        <li><a href="dogbreeds.html">Breeds</a></li>
-        <li><a href="dogfacts.html">Facts</a></li>
-        <li><a href="doggroups.html">Groups</a></li>
-      </ul>
-      <button class="nav-btn">Join the Club</button>
-    </nav>
+    <div class="newspaper">
+      <!-- ══ MASTHEAD ══ -->
+      <header class="masthead">
+        <div class="masthead-top">
+          <span>Vol. LXXI &nbsp;·&nbsp; No. 214</span>
+          <span class="edition-badge">Evening Edition</span>
+          <span>Price: One Good Chuckle</span>
+        </div>
+        <hr class="masthead-rule-thick" />
+        <div class="paper-name">The Pun & Only</div>
+        <div class="paper-tagline">
+          "All the Jokes That Are Fit to Print — And Several That Aren't"
+        </div>
+        <hr class="masthead-rule" />
+        <div class="masthead-bottom">
+          <span>Established 1952 · Pun City, U.S.A.</span>
+          <span>☞ Play on Words Since the Eisenhower Administration ☜</span>
+          <span>Thursday, June 1952</span>
+        </div>
+      </header>
 
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-left">
-        <div class="hero-tag">🐶 Est. 2026</div>
-        <h1 class="hero-h1">Life is better<br />with a <em>dog.</em></h1>
-        <p class="hero-sub">
-          Celebrating the world's most loyal, ridiculous, lovable creatures.
-          Because every dog deserves a little fanfare.
+      <!-- ══ BANNER HEADLINE ══ -->
+      <div class="banner">
+        <div class="kicker">★ Breaking News from the Kitchen Table ★</div>
+        <h1 class="banner-hed">
+          LOCAL MAN TELLS JOKE;<br /><em
+            >Family Groans for Third Consecutive Year</em
+          >
+        </h1>
+        <p class="banner-deck">
+          Witnesses report victim made direct eye contact before delivering
+          punchline; no survivors found laughing sincerely
         </p>
-        <div class="hero-actions">
-          <a class="btn-primary" href="#breeds">Meet the pups</a>
-          <a class="btn-outline" href="#">Adopt one ♥</a>
+      </div>
+
+      <!-- ══ SECTION LABEL ══ -->
+      <div class="section-rule">
+        <div class="section-rule-line"></div>
+        <div class="section-rule-label">
+          ★ Special Feature: The Groaner's Gazette ★
+        </div>
+        <div class="section-rule-line"></div>
+      </div>
+
+      <!-- ══ JOKE ══ -->
+      <div class="columns-2">
+        <div class="col">
+          <div class="col-hed">A Joke of the Day</div>
+          <div class="col-body">
+            <p class="jokebox"></p>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="col-hed">A Meme of the Day</div>
+          <div class="col-body">
+            <p class="memebox"></p>
+          </div>
         </div>
       </div>
 
-      <div class="hero-right">
-        <img src="img/dog.jpeg" alt="dog" />
-      </div>
-    </section>
-
-    <!-- MARQUEE -->
-    <div class="marquee-bar" aria-hidden="true">
-      <div class="marquee-inner">
-        <span>Good boys</span><span class="marquee-sep">🐾</span>
-        <span>Tail wags</span><span class="marquee-sep">🐾</span>
-        <span>Zoomies</span><span class="marquee-sep">🐾</span>
-        <span>Best friends</span><span class="marquee-sep">🐾</span>
-        <span>Fetch champions</span><span class="marquee-sep">🐾</span>
-        <span>Unconditional love</span><span class="marquee-sep">🐾</span>
-        <span>Nose boops</span><span class="marquee-sep">🐾</span>
-        <span>Belly rubs</span><span class="marquee-sep">🐾</span>
-        <span>Good boys</span><span class="marquee-sep">🐾</span>
-        <span>Tail wags</span><span class="marquee-sep">🐾</span>
-        <span>Zoomies</span><span class="marquee-sep">🐾</span>
-        <span>Best friends</span><span class="marquee-sep">🐾</span>
-        <span>Fetch champions</span><span class="marquee-sep">🐾</span>
-        <span>Unconditional love</span><span class="marquee-sep">🐾</span>
-        <span>Nose boops</span><span class="marquee-sep">🐾</span>
-        <span>Belly rubs</span><span class="marquee-sep">🐾</span>
-      </div>
+      <!-- ══ FOOTER ══ -->
+      <footer class="paper-footer">
+        <div class="footer-name">The Pun & Only</div>
+        <div class="footer-copy">
+          Published Every Day Whether You Like It Or Not<br />
+          Cornelius P. Rumbottom, Editor-in-Chief &amp; Chief Groaner<br />
+          © MCMLII · All Puns Reserved · No Refunds
+        </div>
+        <div class="footer-slogan">
+          <em>"We're not responsible<br />for any involuntary chuckles."</em>
+        </div>
+      </footer>
     </div>
+    <!-- end .newspaper -->
 
-    <!-- BREEDS -->
-    <section class="breeds" id="breeds">
-      <div class="section-header">
-        <h2 class="section-title">Meet some<br /><em>goodest</em> breeds</h2>
-      </div>
-
-      <div class="breed-grid">
-        <!-- Corgi card -->
-        <div class="breed-card">
-          <div class="breed-illo">
-            <img src="img/pembroke.jpeg" alt="dog1" />
-          </div>
-          <div class="breed-info">
-            <div class="breed-name">Pembroke Corgi</div>
-            <div class="breed-desc">
-              Fluffy butt, big ears, surprisingly fast. Herded cattle, now herds
-              your heart.
-            </div>
-            <div class="breed-tags">
-              <span class="breed-tag">Playful</span>
-              <span class="breed-tag">Smart</span>
-              <span class="breed-tag">Small</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Dachshund card -->
-        <div class="breed-card">
-          <div class="breed-illo" style="background: #eaf3de">
-            <img src="img/dachshund.jpeg" alt="dog2" />
-          </div>
-          <div class="breed-info">
-            <div class="breed-name">Dachshund</div>
-            <div class="breed-desc">
-              The original sausage dog. Big energy, tiny legs, zero sense of
-              their own size.
-            </div>
-            <div class="breed-tags">
-              <span class="breed-tag">Bold</span>
-              <span class="breed-tag">Curious</span>
-              <span class="breed-tag">Sausage-shaped</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Husky card -->
-        <div class="breed-card">
-          <div class="breed-illo" style="background: #e6f1fb">
-            <img src="img/husky.jpeg" alt="dog3" />
-          </div>
-          <div class="breed-info">
-            <div class="breed-name">Siberian Husky</div>
-            <div class="breed-desc">
-              Ice-blue eyes, dramatic howls, and the attitude of someone who
-              does not need you (but secretly does).
-            </div>
-            <div class="breed-tags">
-              <span class="breed-tag">Dramatic</span>
-              <span class="breed-tag">Athletic</span>
-              <span class="breed-tag">Talkative</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- QUOTE -->
-    <section class="quote-section">
-      <p class="big-quote">
-        "The better I get to know men, the more I find myself loving dogs."
-      </p>
-      <p class="quote-attr">
-        — Charles de Gaulle, probably after a very long day
-      </p>
-
-      <div class="quote-dogs">
-        <!-- three tiny sitting dogs -->
-        <svg width="72" height="72" viewBox="0 0 80 80" fill="none">
-          <ellipse cx="40" cy="72" rx="22" ry="5" fill="white" opacity="0.15" />
-          <ellipse cx="40" cy="58" rx="18" ry="14" fill="#E8A74A" />
-          <ellipse cx="40" cy="42" rx="14" ry="12" fill="#E8A74A" />
-          <ellipse
-            cx="30"
-            cy="36"
-            rx="7"
-            ry="10"
-            fill="#C8833A"
-            transform="rotate(-10 30 36)"
-          />
-          <ellipse
-            cx="50"
-            cy="36"
-            rx="7"
-            ry="10"
-            fill="#C8833A"
-            transform="rotate(10 50 36)"
-          />
-          <ellipse cx="40" cy="44" rx="8" ry="5" fill="#D4913D" />
-          <ellipse cx="40" cy="40" rx="4" ry="3" fill="#3D1F0D" />
-          <ellipse cx="33" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="33" cy="37" rx="2.5" ry="2.5" fill="#3D1F0D" />
-          <ellipse cx="32" cy="36" rx="1" ry="1" fill="white" />
-          <ellipse cx="47" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="47" cy="37" rx="2.5" ry="2.5" fill="#3D1F0D" />
-          <ellipse cx="46" cy="36" rx="1" ry="1" fill="white" />
-          <path
-            d="M36 48 Q40 52 44 48"
-            stroke="#3D1F0D"
-            stroke-width="1.5"
-            fill="none"
-            stroke-linecap="round"
-          />
-          <rect x="27" y="62" width="10" height="12" rx="5" fill="#C8833A" />
-          <rect x="43" y="62" width="10" height="12" rx="5" fill="#C8833A" />
-        </svg>
-
-        <svg width="72" height="72" viewBox="0 0 80 80" fill="none">
-          <ellipse cx="40" cy="72" rx="22" ry="5" fill="white" opacity="0.15" />
-          <ellipse cx="40" cy="58" rx="18" ry="14" fill="#D0D8E0" />
-          <ellipse cx="40" cy="42" rx="14" ry="12" fill="#D0D8E0" />
-          <polygon
-            points="28,34 20,10 36,32"
-            fill="#B0B8C8"
-            stroke="#3D1F0D"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-          <polygon
-            points="52,34 60,10 44,32"
-            fill="#B0B8C8"
-            stroke="#3D1F0D"
-            stroke-width="1.5"
-            stroke-linejoin="round"
-          />
-          <ellipse cx="40" cy="44" rx="8" ry="5" fill="white" opacity="0.7" />
-          <ellipse cx="40" cy="40" rx="4" ry="3" fill="#3D1F0D" />
-          <ellipse cx="33" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="33" cy="37" rx="2.5" ry="2.5" fill="#5AACDF" />
-          <ellipse cx="32" cy="36" rx="1" ry="1" fill="white" />
-          <ellipse cx="47" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="47" cy="37" rx="2.5" ry="2.5" fill="#5AACDF" />
-          <ellipse cx="46" cy="36" rx="1" ry="1" fill="white" />
-          <path
-            d="M36 48 Q40 52 44 48"
-            stroke="#3D1F0D"
-            stroke-width="1.5"
-            fill="none"
-            stroke-linecap="round"
-          />
-          <rect x="27" y="62" width="10" height="12" rx="5" fill="#B0B8C8" />
-          <rect x="43" y="62" width="10" height="12" rx="5" fill="#B0B8C8" />
-        </svg>
-
-        <svg width="72" height="72" viewBox="0 0 80 80" fill="none">
-          <ellipse cx="40" cy="72" rx="22" ry="5" fill="white" opacity="0.15" />
-          <ellipse cx="40" cy="58" rx="18" ry="14" fill="#8B4513" />
-          <ellipse cx="40" cy="42" rx="14" ry="12" fill="#8B4513" />
-          <ellipse
-            cx="28"
-            cy="40"
-            rx="9"
-            ry="14"
-            fill="#6B2F0A"
-            transform="rotate(-8 28 40)"
-          />
-          <ellipse
-            cx="52"
-            cy="40"
-            rx="9"
-            ry="14"
-            fill="#6B2F0A"
-            transform="rotate(8 52 40)"
-          />
-          <ellipse cx="40" cy="44" rx="8" ry="5" fill="#C4834A" />
-          <ellipse cx="40" cy="40" rx="4" ry="3" fill="#3D1F0D" />
-          <ellipse cx="33" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="33" cy="37" rx="2.5" ry="2.5" fill="#3D1F0D" />
-          <ellipse cx="32" cy="36" rx="1" ry="1" fill="white" />
-          <ellipse cx="47" cy="36" rx="4" ry="4" fill="white" />
-          <ellipse cx="47" cy="37" rx="2.5" ry="2.5" fill="#3D1F0D" />
-          <ellipse cx="46" cy="36" rx="1" ry="1" fill="white" />
-          <path
-            d="M36 48 Q40 52 44 48"
-            stroke="#3D1F0D"
-            stroke-width="1.5"
-            fill="none"
-            stroke-linecap="round"
-          />
-          <rect x="27" y="62" width="10" height="12" rx="5" fill="#7A3A10" />
-          <rect x="43" y="62" width="10" height="12" rx="5" fill="#7A3A10" />
-        </svg>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-      <span>© 2025 Good Dogs Club</span>
-      <span>Made with 🐾 and too many dog videos</span>
-      <span>All dogs are good dogs</span>
-    </footer>
     <script src="js/index.js"></script>
   </body>
 </html>

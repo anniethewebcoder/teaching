@@ -5,38 +5,42 @@ let factList = document.createElement("ul");
 heroRight.append(factList);
 let factButton = document.querySelector("#factButton");
 
-factButton.addEventListener("click", function (event) {
+factButton.addEventListener("click", async function (event) {
   event.preventDefault();
 
-  //   fetch(api_url)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       console.log(data);
-  //       data.data.forEach((fact) => {
-  //         let factElement = document.createElement("li");
-  //         factElement.textContent = fact.attributes.body;
-  //         factList.append(factElement);
-  //         console.log(fact.attributes.body);
-  //       });
-  //     })
-  //     .catch((err) => console.error(err));
+  factList.textContent = "";
 
-  async function fetchDogFacts() {
-    try {
-      let res = await fetch(api_url);
-      let data = await res.json();
-      console.log(data);
-
-      data.data.forEach((fact) => {
-        let factElement = document.createElement("li");
-        factElement.textContent = fact.attributes.body;
-        factList.append(factElement);
-        console.log(fact.attributes.body);
-      });
-    } catch (err) {
-      console.error(err);
-    }
-  }
-
-  fetchDogFacts();
+  let data = await fetchDogFacts(api_url);
+  console.log(data);
 });
+
+async function fetchDogFacts(url) {
+  try {
+    let res = await fetch(url);
+    let data = await res.json();
+
+    return data;
+
+    // data.data.forEach((fact) => {
+    //   let factElement = document.createElement("li");
+    //   factElement.textContent = fact.attributes.body;
+    //   factList.append(factElement);
+    //   console.log(fact.attributes.body);
+    // });
+  } catch (err) {
+    console.error(err);
+  }
+}
+
+//   fetch(api_url)
+//     .then((res) => res.json())
+//     .then((data) => {
+//       console.log(data);
+//       data.data.forEach((fact) => {
+//         let factElement = document.createElement("li");
+//         factElement.textContent = fact.attributes.body;
+//         factList.append(factElement);
+//         console.log(fact.attributes.body);
+//       });
+//     })
+//     .catch((err) => console.error(err));
